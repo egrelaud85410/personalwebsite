@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Emmanuel Grelaud — Personnel & Professionnel</title>
+<meta name="description" content="Site personnel et professionnel d'Emmanuel Grelaud : notes, restaurants, projets d'investissement.">
+<style>
+:root{--bg:#0b0c0f;--fg:#e9ecf1;--muted:#aab2bf;--card:#141720;--border:#22283a;--accent:#67a8ff;--ok:#22c55e33}
+@media (prefers-color-scheme: light){:root{--bg:#ffffff;--fg:#10131a;--muted:#5a6577;--card:#f6f8fb;--border:#e5e9f2;--accent:#0b5cff;--ok:#22c55e22}}
+*{box-sizing:border-box}html,body{margin:0;padding:0;background:var(--bg);color:var(--fg);font-family:system-ui,-apple-system,Segoe UI,Inter,Roboto,Arial,sans-serif}
+a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}
+.container{max-width:1100px;margin:0 auto;padding:20px}
+header.sticky{position:sticky;top:0;background:linear-gradient(to bottom, rgba(0,0,0,.6), rgba(0,0,0,0));backdrop-filter:blur(10px);z-index:50;border-bottom:1px solid var(--border)}
+nav{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:10px 20px}
+.brand{display:flex;align-items:center;gap:10px}.logo{width:40px;height:40px;border-radius:10px;background:var(--accent);color:#fff;display:grid;place-items:center;font-weight:800}
+.nav-links{display:flex;gap:10px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--border);background:var(--card);color:var(--fg);padding:8px 12px;border-radius:12px;font-size:14px}
+.btn:hover{transform:translateY(-1px)}.primary{background:var(--accent);color:#fff;border-color:transparent}
+main.grid{display:grid;grid-template-columns:260px 1fr;gap:20px}@media (max-width:900px){main.grid{grid-template-columns:1fr}}
+.box{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:16px}
+h1{font-size:clamp(1.8rem,4vw,2.6rem);margin:6px 0 0}h2{font-size:1.4rem;margin:0 0 10px}h3{font-size:1.05rem;margin:0 0 6px}
+small.muted{color:var(--muted)}.sidebar .group{margin-bottom:14px}.sidebar .link{display:block;padding:10px 12px;border-radius:12px}.sidebar .link.active{background:var(--accent);color:white}
+.controls{display:flex;gap:8px;flex-wrap:wrap}input,textarea{width:100%;padding:10px;border-radius:12px;border:1px solid var(--border);background:transparent;color:var(--fg)}textarea{min-height:110px}
+.list{list-style:none;margin:0;padding:0;display:grid;gap:10px}.item{padding:10px;border:1px solid var(--border);border-radius:12px;background:rgba(255,255,255,0.02)}.item.done{background:var(--ok)}
+.flex{display:flex;align-items:center;gap:8px}.top-bar{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:10px}
+.badge{border:1px solid var(--border);border-radius:999px;padding:4px 10px;color:var(--muted);font-size:12px}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:10px}.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+@media (max-width:800px){.grid3{grid-template-columns:1fr}.grid2{grid-template-columns:1fr}}.photo{width:100%;height:150px;object-fit:cover;border-radius:12px;border:1px solid var(--border)}
+footer{color:var(--muted);text-align:center;padding:24px 0}.hr{height:1px;background:var(--border);margin:12px 0}
+</style>
+</head>
+<body>
+<header class="sticky">
+  <nav class="container">
+    <div class="brand">
+      <div class="logo">EG</div>
+      <div>
+        <div style="font-weight:700;line-height:1.1">Emmanuel Grelaud</div>
+        <small class="muted">Site personnel & professionnel</small>
+      </div>
+    </div>
+    <div class="nav-links">
+      <a class="btn" href="#personnel">Personnel</a>
+      <a class="btn" href="#pro">Professionnel</a>
+      <a class="btn primary" href="#contact">Contact</a>
+    </div>
+  </nav>
+</header>
+
+<main class="container grid">
+  <aside class="sidebar box" id="sidebar">
+    <div class="group">
+      <div class="badge">Section</div>
+      <div class="controls">
+        <button class="btn" data-section="personnel">Personnel</button>
+        <button class="btn" data-section="pro">Professionnel</button>
+      </div>
+    </div>
+    <div class="group" id="tabs-personnel">
+      <div class="badge">Personnel</div>
+      <a class="link active" data-tab="restaurants" href="#">Restaurants</a>
+      <a class="link" data-tab="lieux" href="#">Lieux à visiter</a>
+      <a class="link" data-tab="todo" href="#">Todo</a>
+      <a class="link" data-tab="bucket" href="#">Bucket list</a>
+      <a class="link" data-tab="divers" href="#">Divers</a>
+      <a class="link" data-tab="galerie" href="#">Galerie</a>
+    </div>
+    <div class="group" id="tabs-pro" style="display:none">
+      <div class="badge">Professionnel</div>
+      <a class="link active" data-tab="immo" href="#">Investissement Immo</a>
+      <a class="link" data-tab="crypto" href="#">Investissement Crypto</a>
+      <a class="link" data-tab="actions" href="#">Actions & Fonds</a>
+    </div>
+    <div class="hr"></div>
+    <div class="group">
+      <div class="badge">Liens</div>
+      <div class="controls">
+        <a class="btn" href="#" title="LinkedIn (à remplacer)">LinkedIn</a>
+        <a class="btn" href="#" title="GitHub (à remplacer)">GitHub</a>
+        <a class="btn" href="mailto:contact@emmanuel-grelaud.example" title="Email (à remplacer)">Email</a>
+      </div>
+    </div>
+  </aside>
+
+  <section id="content" class="space">
+    <!-- rendu dynamique via JS -->
+  </section>
+</main>
+
+<section class="container box" id="contact" style="margin-top:14px">
+  <h2>Contact</h2>
+  <div class="grid2">
+    <form onsubmit="event.preventDefault(); alert('Merci !');">
+      <div class="grid2">
+        <input placeholder="Nom" required>
+        <input placeholder="Email" type="email" required>
+      </div>
+      <textarea placeholder="Votre message…" required></textarea>
+      <div class="controls">
+        <button class="btn primary" type="submit">Envoyer</button>
+        <a class="btn" href="mailto:contact@emmanuel-grelaud.example">Par email</a>
+      </div>
+    </form>
+    <div>
+      <p><strong>Emmanuel Grelaud</strong><br/>Basé à Paris (FR)</p>
+      <p class="muted">Remplace les liens LinkedIn/GitHub/email dans la sidebar.</p>
+    </div>
+  </div>
+</section>
+
+<footer>© <span id="y"></span> Emmanuel Grelaud — Version 1</footer>
+
+<script>
+const $=(q,el=document)=>el.querySelector(q), $$=(q,el=document)=>Array.from(el.querySelectorAll(q));
+const LS={get(k,d){try{const v=localStorage.getItem(k);return v?JSON.parse(v):d}catch(e){return d}}, set(k,v){try{localStorage.setItem(k,JSON.stringify(v))}catch(e){}}};
+const seedRestaurants={Rooftops:[{name:'Le Ciel de Paris',address:'Tour Montparnasse, 33 Av. du Maine, 75015',phone:'01 40 64 77 64',note:'Dîner au 56ᵉ étage avec vue exceptionnelle sur la Tour Eiffel',done:false},{name:'Les Ombres Rooftop',address:'Musée du Quai Branly, 27 Quai Jacques Chirac, 75007',phone:'01 47 53 68 00',note:'Terrasse iconique avec vue rapprochée sur la Tour Eiffel',done:false},{name:'Café de l’Homme',address:'1 Pl. du Trocadéro, 75016',phone:'01 44 05 30 15',note:'Terrasse panoramique face à la Tour Eiffel',done:false},{name:'Terrass’’ Hôtel Rooftop',address:'12-14 Rue Joseph de Maistre, 75018',phone:'01 44 92 34 00',note:'Rooftop de Montmartre avec vues sur Paris',done:false},{name:'L’Oiseau Blanc (The Peninsula)',address:'19 Av. Kléber, 75116',phone:'01 58 12 28 88',note:'2★ Michelin, décor aviation, vue Tour Eiffel',done:false},{name:'Terraza Mikuna',address:'1 Rue des Archives, 75004',phone:'01 42 72 08 99',note:'Cuisine péruvienne dans le Marais',done:false},{name:'10ᵉ Ciel',address:'Pullman Tour Eiffel, 22 Rue Jean Rey, 75015',phone:'01 44 38 56 00',note:'Cocktails et vues panoramiques',done:false},{name:'Too Tac Tac (Too Hotel)',address:'65 Rue Bruneseau, 75013',phone:'01 86 65 19 10',note:'Ambiance festive, vue sur la Seine',done:false},{name:'Perruche',address:'Printemps Haussmann, 2 Rue du Havre, 75009',phone:'01 42 82 60 00',note:'Rooftop végétalisé, cuisine méditerranéenne',done:false},{name:'Windo Skybar (Hyatt Regency)',address:'3 Pl. du Général Kœnig, 75017',phone:'01 40 68 51 19',note:'Vue 360° sur Paris',done:false},{name:'ROOF – Hôtel Madame Rêve',address:'43 rue Étienne Marcel, 75001',phone:'01 85 73 02 02',note:'Rooftop au cœur de Paris',done:false},{name:'Vila M',address:'24 Bd Pasteur, 75015',phone:'01 40 40 75 75',note:'Design végétal, esprit éco‑responsable',done:false},{name:'Rosa Bonheur sur Seine',address:'37 Quai d’Orsay (Port des Invalides), 75007',phone:'',note:'Péniche guinguette, pizzas au feu de bois',done:false}],Bistronomiques:[{name:'Monsieur Dior',address:'30/32 Av. Montaigne, 75008',phone:'01 40 73 53 63',note:'Par Jean Imbert, plats signature',done:false},{name:'Magdalena',address:'16 Pl. de la Madeleine, 75008',phone:'01 42 65 05 61',note:'Brasserie élégante, brunch du dimanche',done:false},{name:'Margaux',address:'1A Av. de New York, 75016',phone:'01 40 70 16 66',note:'Vue Tour Eiffel, cuisine raffinée',done:false},{name:'Les Résistants',address:'16‑18 Rue du Château d’Eau, 75010',phone:'01 42 05 18 88',note:'Produits de petits producteurs',done:false},{name:'La Tour d’Argent',address:'15/17 Quai de la Tournelle, 75005',phone:'01 43 54 23 31',note:'Institution historique, canard à la presse',done:false},{name:'Sellae',address:'18 Rue des Wallons, 75013',phone:'01 43 31 36 04',note:'Bistrot moderne, ravioles d’escargots',done:false},{name:'Quelque Part – Les Abysses',address:'9 Rue des Récollets, 75010',phone:'06 60 36 40 69',note:'Expérience immersive 360°',done:false},{name:'Habile',address:'16 Rue de Lancry, 75010',phone:'01 44 63 82 62',note:'Restaurant / boutique / épicerie',done:false}],'Fruits de mer':[ {name:'Janette – Bar de la mer',address:'17‑19 Chaussée de la Muette, 75016',phone:'01 45 03 33 00',note:'Huîtres & fruits de mer',done:false} ]};
+const state={section:LS.get('eg:section','personnel'),tab:LS.get('eg:tab','restaurants'),restaurants:LS.get('eg:restaurants',seedRestaurants),lieux:LS.get('eg:lieux',[]),todo:LS.get('eg:todo',[]),bucket:LS.get('eg:bucket',[]),divers:LS.get('eg:divers',''),photos:LS.get('eg:photos',[]),pro:{immo:{infos:LS.get('eg:pro:immo:infos',''),formations:LS.get('eg:pro:immo:formations',[]),docs:LS.get('eg:pro:immo:docs',[]),divers:LS.get('eg:pro:immo:divers',[])},crypto:{infos:LS.get('eg:pro:crypto:infos',''),formations:LS.get('eg:pro:crypto:formations',[]),docs:LS.get('eg:pro:crypto:docs',[]),divers:LS.get('eg:pro:crypto:divers',[])},actions:{infos:LS.get('eg:pro:actions:infos',''),formations:LS.get('eg:pro:actions:formations',[]),docs:LS.get('eg:pro:actions:docs',[]),divers:LS.get('eg:pro:actions:divers',[])}}};
+function save(){LS.set('eg:section',state.section);LS.set('eg:tab',state.tab);LS.set('eg:restaurants',state.restaurants);LS.set('eg:lieux',state.lieux);LS.set('eg:todo',state.todo);LS.set('eg:bucket',state.bucket);LS.set('eg:divers',state.divers);LS.set('eg:photos',state.photos);for(const k of ['immo','crypto','actions']){const p=state.pro[k];LS.set(`eg:pro:${k}:infos`,p.infos);LS.set(`eg:pro:${k}:formations`,p.formations);LS.set(`eg:pro:${k}:docs`,p.docs);LS.set(`eg:pro:${k}:divers`,p.divers);}}
+function render(){$('#tabs-personnel').style.display=state.section==='personnel'?'':'none';$('#tabs-pro').style.display=state.section==='pro'?'':'none';$$('#tabs-personnel .link, #tabs-pro .link').forEach(a=>a.classList.toggle('active',a.dataset.tab===state.tab));const c=$('#content');c.innerHTML='';if(state.section==='personnel'){if(state.tab==='restaurants'){c.appendChild(restaurantsView());}if(state.tab==='lieux'){c.appendChild(listView('Lieux à visiter','lieux'));}if(state.tab==='todo'){c.appendChild(listView('Todo personnelle','todo'));}if(state.tab==='bucket'){c.appendChild(listView('Bucket list','bucket'));}if(state.tab==='divers'){c.appendChild(textView('Notes diverses','divers'));}if(state.tab==='galerie'){c.appendChild(galleryView());}}else{if(state.tab==='immo'){c.appendChild(proBlock('Investissement Immo','immo'));}if(state.tab==='crypto'){c.appendChild(proBlock('Investissement Crypto','crypto'));}if(state.tab==='actions'){c.appendChild(proBlock('Actions & Fonds','actions'));}}}
+function listView(title,key){const wrap=document.createElement('div');wrap.className='box';wrap.innerHTML=`<div class="top-bar"><h2>${title}</h2><span class="badge">Stocké sur cet appareil</span></div><div class="controls"><input placeholder="Ajouter…"><button class="btn primary">Ajouter</button></div><ul class="list"></ul>`;const input=$('input',wrap);const btn=$('button',wrap);const list=$('ul',wrap);function paint(){list.innerHTML='';if(state[key].length===0){list.innerHTML='<div class="muted">— à compléter —</div>';return;}state[key].forEach((it,i)=>{const li=document.createElement('li');li.className='item flex';li.innerHTML=`<label class="flex"><input type="checkbox" ${it.done?'checked':''} class="chk"><span>${it.text}</span></label><span style="margin-left:auto"></span><button class="btn">Supprimer</button>`;li.querySelector('.chk').onchange=e=>{it.done=e.target.checked;save();paint();};li.querySelector('button').onclick=()=>{state[key].splice(i,1);save();paint();};list.appendChild(li);});}function add(){const t=input.value.trim();if(!t)return;state[key].unshift({text:t,done:false,ts:Date.now()});input.value='';save();paint();}btn.onclick=add;input.onkeydown=e=>e.key==='Enter'&&add();paint();return wrap;}
+function textView(title,key){const wrap=document.createElement('div');wrap.className='box';wrap.innerHTML=`<h2>${title}</h2><textarea placeholder="Notes libres…"></textarea>`;const ta=$('textarea',wrap);ta.value=state[key]||'';ta.oninput=()=>{state[key]=ta.value;save();};return wrap;}
+function proBlock(title,k){const page=document.createElement('div');page.className='grid3';page.appendChild(sectionBox('Infos générales',richArea(`eg:pro:${k}:infos`)));page.appendChild(sectionBox('Formations / Cours',listEditor(state.pro[k].formations,arr=>{state.pro[k].formations=arr;save();})));page.appendChild(sectionBox('Docs / Livres / Vidéos',listEditor(state.pro[k].docs,arr=>{state.pro[k].docs=arr;save();})));page.appendChild(sectionBox('Divers',listEditor(state.pro[k].divers,arr=>{state.pro[k].divers=arr;save();})));const wrap=document.createElement('div');wrap.className='box';wrap.innerHTML=`<h2>${title}</h2>`;wrap.appendChild(page);return wrap;}
+function sectionBox(title,body){const b=document.createElement('div');b.className='box';b.innerHTML=`<h3>${title}</h3>`;b.appendChild(body);return b;}
+function richArea(key){const ta=document.createElement('textarea');ta.placeholder='Notes, stratégie, KPI…';ta.value=LS.get(key,'');ta.oninput=()=>LS.set(key,ta.value);return ta;}
+function listEditor(arr,onChange){const wrap=document.createElement('div');wrap.innerHTML=`<div class="controls"><input placeholder="Ajouter (lien/texte)…"><button class="btn primary">Ajouter</button></div><ul class="list"></ul>`;const input=$('input',wrap);const btn=$('button',wrap);const list=$('ul',wrap);function paint(){list.innerHTML='';if(arr.length===0){list.innerHTML='<div class="muted">— à compléter —</div>';return;}arr.forEach((t,i)=>{const li=document.createElement('li');li.className='item flex';li.innerHTML=`<span>${t}</span><span style="margin-left:auto"></span><button class="btn">Supprimer</button>`;li.querySelector('button').onclick=()=>{arr.splice(i,1);onChange(arr.slice());paint();};list.appendChild(li);});}function add(){const t=input.value.trim();if(!t)return;arr.unshift(t);input.value='';onChange(arr.slice());paint();}btn.onclick=add;input.onkeydown=e=>e.key==='Enter'&&add();paint();return wrap;}
+function restaurantsView(){const wrap=document.createElement('div');wrap.className='box';wrap.innerHTML=`<div class="top-bar"><h2>Restaurants</h2><span class="badge">Cliquer sur un champ pour éditer</span></div>`;for(const cat of Object.keys(state.restaurants)){const sec=document.createElement('div');sec.className='box';sec.style.marginTop='10px';sec.innerHTML=`<h3>${cat}</h3><div class="controls"><input placeholder="Nom"> <input placeholder="Adresse"><input placeholder="Téléphone"><input placeholder="Note"><button class="btn primary">Ajouter</button></div><ul class="list"></ul>`;const ins=$$('input',sec);const n=ins[0],a=ins[1],p=ins[2],no=ins[3];const addBtn=$('button',sec);const list=$('ul',sec);function paint(){list.innerHTML='';if(state.restaurants[cat].length===0){list.innerHTML='<div class="muted">— à compléter —</div>';return;}state.restaurants[cat].forEach((it,i)=>{const li=document.createElement('li');li.className='item';li.innerHTML=`<div class="flex"><label class="flex"><input type="checkbox" ${it.done?'checked':''} class="chk"><strong contenteditable="true">${it.name}</strong></label><span style="margin-left:auto"></span><button class="btn">Supprimer</button></div><div class="grid2" style="margin-top:8px"><input value="${it.address}"><input value="${it.phone||''}"></div><input value="${it.note||''}" style="margin-top:8px">`;const inps=$$('input',li);const addr=inps[1],phone=inps[2],note=inps[3];li.querySelector('.chk').onchange=e=>{it.done=e.target.checked;save();render();};li.querySelector('button').onclick=()=>{state.restaurants[cat].splice(i,1);save();paint();};const nameLabel=li.querySelector('strong');nameLabel.oninput=()=>{it.name=nameLabel.textContent.trim();save();};addr.oninput=()=>{it.address=addr.value;save();};phone.oninput=()=>{it.phone=phone.value;save();};note.oninput=()=>{it.note=note.value;save();};list.appendChild(li);});}function add(){const name=n.value.trim();if(!name)return;state.restaurants[cat].unshift({name,address:a.value.trim(),phone:p.value.trim(),note:no.value.trim(),done:false});n.value=a.value=p.value=no.value='';save();paint();}addBtn.onclick=add;n.onkeydown=e=>e.key==='Enter'&&add();paint();wrap.appendChild(sec);}return wrap;}
+function galleryView(){const wrap=document.createElement('div');wrap.className='box';wrap.innerHTML=`<h2>Galerie</h2><div class="controls"><label class="btn"><input type="file" multiple accept="image/*" hidden>Importer des photos</label><button class="btn" id="clear">Vider</button><span class="badge">Stocké en local (privé)</span></div><div class="grid2" id="grid"></div>`;const input=wrap.querySelector('input[type=file]');const grid=wrap.querySelector('#grid');const clearBtn=wrap.querySelector('#clear');function paint(){grid.innerHTML='';if(state.photos.length===0){grid.innerHTML='<div class="muted">— Aucune photo —</div>';return;}state.photos.forEach((src)=>{const img=new Image();img.src=src;img.className='photo';grid.appendChild(img);});}input.onchange=(e)=>{const files=Array.from(e.target.files||[]).slice(0,12);Promise.all(files.map(f=>new Promise(res=>{const r=new FileReader();r.onload=()=>res(r.result);r.readAsDataURL(f);}))).then(list=>{state.photos=[...list,...state.photos].slice(0,24);save();paint();});};clearBtn.onclick=()=>{if(confirm('Supprimer toutes les photos locales ?')){state.photos=[];save();paint();}};paint();return wrap;}
+$$('.sidebar .btn[data-section]').forEach(b=> b.onclick=()=>{state.section=b.dataset.section;save();render();});
+$$('#tabs-personnel .link, #tabs-pro .link').forEach(a=> a.onclick=(e)=>{e.preventDefault();state.tab=a.dataset.tab;save();render();});
+$('#y').textContent=new Date().getFullYear();
+render();
+</script>
+</body>
+</html>
